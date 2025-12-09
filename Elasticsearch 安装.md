@@ -98,7 +98,7 @@ http://192.168.1.30:9200
 
 ##### 至此，Elasticsearch单机版安装就介绍完成了，请开始你的表演吧！
 
-参考链接：https://www.elastic.co/docs/deploy-manage/deploy/self-managed
+##### 参考链接：https://www.elastic.co/docs/deploy-manage/deploy/self-managed
 
 &nbsp;
 
