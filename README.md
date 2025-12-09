@@ -1,4 +1,4 @@
-## ELK Wiki
+## Elasticsearch Wiki
 
 ## 概述
 
