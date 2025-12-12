@@ -20,6 +20,11 @@ Kibana是基于TS语言开发，运行在Node.js环境的一款可视化工具�
 
 操作系统配置调整
 ```
+下载Elasticsearch，并解压
+```
+wget https://artifacts.elastic.co/downloads/kibana/kibana-8.19.8-linux-x86_64.tar.gz
+tar -zxvf kibana-8.19.8-linux-x86_64.tar.gz -C /opt/
+
 创建Kibana用户、密码
 useradd elk
 passwd elk
@@ -29,15 +34,10 @@ chown -R elk:elk /opt/elasticsearch-8.19.8
 
 切换用户
 su - elk
-
-下载Elasticsearch，并解压
-```
-wget https://artifacts.elastic.co/downloads/kibana/kibana-8.19.8-linux-x86_64.tar.gz
-tar -zxvf kibana-8.19.8-linux-x86_64.tar.gz -C /opt/
 ```
 
 编辑kibana.yml
-
+```
 server.port: 5601
 
 server.host: "192.168.1.30"
@@ -63,7 +63,17 @@ logging.appenders.default:
 # 添加kibana内置用户
 elasticsearch.username: kibana_system
 elasticsearch.password: kibana-1
+```
 
 编辑node.options
+```
+# 注销旧版本openssl
 # --openssl-legacy-provider
+```
+
+启动kibana，浏览器确认
+```
+su - elk
+nohup ./kibana &
+http://192.168.1.5:5601/
 ```
