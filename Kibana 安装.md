@@ -14,4 +14,56 @@ Kibana是基于TS语言开发，运行在Node.js环境的一款可视化工具�
 - **Kiana与Elasticsearch须完全一致**
 - **Kiana不建议使用root启动**
 - **操作系统防火墙如打开，可将端口放开**
+- **kibana启动进程是node**
 
+## 开始正文
+
+操作系统配置调整
+```
+创建Kibana用户、密码
+useradd elk
+passwd elk
+
+设置目录权限
+chown -R elk:elk /opt/elasticsearch-8.19.8
+
+切换用户
+su - elk
+
+下载Elasticsearch，并解压
+```
+wget https://artifacts.elastic.co/downloads/kibana/kibana-8.19.8-linux-x86_64.tar.gz
+tar -zxvf kibana-8.19.8-linux-x86_64.tar.gz -C /opt/
+```
+
+编辑kibana.yml
+
+server.port: 5601
+
+server.host: "192.168.1.30"
+
+server.name: "kibana-1"
+
+elasticsearch.hosts: ["http://192.168.1.30:9200"]
+
+i18n.locale: "zh-CN"
+
+logging.appenders.default:
+  type: rolling-file
+  fileName: /opt/kibana-8.19.8/logs/kibana.log
+  policy:
+    type: size-limit
+    size: 256mb  # 每个文件最大256MB
+  strategy:
+    type: numeric
+    max: 10      # 保留10个备份文件
+  layout:
+    type: json
+	
+# 添加kibana内置用户
+elasticsearch.username: kibana_system
+elasticsearch.password: kibana-1
+
+编辑node.options
+# --openssl-legacy-provider
+```
