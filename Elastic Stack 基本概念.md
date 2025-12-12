@@ -32,4 +32,14 @@
 - **KQL(Kibana Query Language)：基于Kibana UI的查询语言，可以通过Kibana UI界面操作自动生成查询、过滤数据**
 - **Lucene query syntax：基于Apache Lucene的基本搜索、简单过滤的原始查询语法**
 
+#### Elasticsearch 常用数据类型：keyword、Number、Date、Text、Boolean、Object、Geo_point
+
+#### Elasticsearch CRUD常用操作语法("POST _bulk API"是高效率写入的核心，可以在一个请求中混合执行索引、创建、更新、删除等多种操作)
+- **查询：match、multi_match、term、terms、range、exists、bool、filter、geo_distance、geo_bounding_box等**
+- **插入："PUT /index/_doc/1"、"POST _bulk"**
+- **更新："POST /<index>/_update/<id>"、"POST /<index>/_update_by_query"、"POST _bulk"**
+- **删除："DELETE /<index>/_doc/<id>"、"POST /<index>/_delete_by_query"、"POST _bulk"**
+
+
+
 
