@@ -40,7 +40,7 @@
 - **更新："POST /<index>/_update/<id>"、"POST /<index>/_update_by_query"、"POST _bulk"**
 - **删除："DELETE /<index>/_doc/<id>"、"POST /<index>/_delete_by_query"、"POST _bulk"**
 
-# Elasticsearch 倒排索引结构
+#### Elasticsearch 倒排索引结构
 ![Elasticsearch 倒排索引数据结构](images/倒排索引数据结构.png)
 
 
