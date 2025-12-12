@@ -21,7 +21,6 @@ Kibana是基于TS语言开发，运行在Node.js环境的一款可视化工具�
 操作系统配置调整
 ```
 下载Elasticsearch，并解压
-```
 wget https://artifacts.elastic.co/downloads/kibana/kibana-8.19.8-linux-x86_64.tar.gz
 tar -zxvf kibana-8.19.8-linux-x86_64.tar.gz -C /opt/
 
