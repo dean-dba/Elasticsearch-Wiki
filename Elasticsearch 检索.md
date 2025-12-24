@@ -5,6 +5,7 @@
 - **"profile": true类似于mysql explain**
 - **ES 默认评分算法：BM25(默认：k1(词频)=1.2, b(文档长度归一化)=0.75)**
 - **一次请求默认最多10000条**
+- **_shard_doc：集群全局有序**
 
 #### 自定义评分方式：内置函数评分(90%场景使用field_value_factor)、自定义脚本评分、自定义BM25评分、两阶段评分
     
@@ -73,7 +74,7 @@ script：自定义脚本查询，示例：{"script": {"script": {"source": "doc[
 语法特点："from:1000,size:10"：需要加载1010条文档，没有类似于MYSQL ICP功能
 
 scroll：深度分页，基于快照非实时，不能随机分页
-示例："POST /index_name/_search?scroll=1m { "size": 100, "query": {...}, "sort": [ {"_shard_doc": "asc"}  // 特殊排序，高效遍历 ] }"-->"POST /_search/scroll {"scroll": "1m","scroll_id": "DXF1ZXJ5QW5kRmV0Y2gBAAAAAAAAAD4WYm9laVY..."}"-->"DELETE /_search/scroll { "scroll_id": "DXF1ZXJ5QW5kRmV0Y2gBAAAAAAAAAD4WYm9laVYtZ2twU2h1NnJYc1F6VDRpQQ=="}"
+示例："POST /index_name/_search?scroll=1m { "size": 100, "query": {...}, "sort": [ "_shard_doc"  // 全局有序 ] }"-->"POST /_search/scroll {"scroll": "1m","scroll_id": "DXF1ZXJ5QW5kRmV0Y2gBAAAAAAAAAD4WYm9laVY..."}"-->"DELETE /_search/scroll { "scroll_id": "DXF1ZXJ5QW5kRmV0Y2gBAAAAAAAAAD4WYm9laVYtZ2twU2h1NnJYc1F6VDRpQQ=="}"
 应用场景：数据导出、全量处理
 语法特点："scroll=1m"：快照保持时间，类似于ORACLE 游标
 
