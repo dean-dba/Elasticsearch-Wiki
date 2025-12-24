@@ -15,7 +15,7 @@
 #### Elasticsearch 数据类型
 - **基础类型：boolean、keyword、number(integer、long、float、double)、date、text**
 - **特殊类型：数组、json对象、nested数组、join、flattened**
-- **nested：将json数据作为一个数组整体存储和索引，进行CRUD**
+- **nested：将json数据作为一个数组整体存储和索引，进行CRUD，特点：将嵌套的每个子json当成一个独立个体，多个子json就是多个独立个体**
 - **join：同一索引中通过父子关系实现类似于MySQL join效果，生产环境中严禁使用，应用层多索引关联解决**
 - **flattened：将json对象内的多个字段映射为一个字段，避免字段膨胀场景**
 
