@@ -66,7 +66,9 @@ script：自定义脚本查询，示例：{"script": {"script": {"source": "doc[
 高亮、排序、分页
 ```
 高亮：检索结果突出显示，应用场景：内容检索、日志分析，语法特点：fragment_size(每个片段高亮字符长度：100)、number_of_fragments(高亮片段数量：5)、高亮标签：<em>，示例：{ "query": { /* 查询条件 */ }, "highlight": { "fields": { "高亮字段名": { /* 具体配置 */ } }} }
+
 排序：按某一字段排序，禁用内置评分，示例：{ "query": { "match": { "fields": "electronics" } },  "sort": [  { "price": { "order": "asc" } }, { "rating": { "order": "desc" } } ] }
+
 分页类型："from:0,size:10"、search_after、scroll、PIT(Point in Time)+search_after
 
 "from:0,size:10"：浅分页
