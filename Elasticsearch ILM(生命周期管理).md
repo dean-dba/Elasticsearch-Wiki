@@ -179,3 +179,8 @@ PUT test-400/_bulk
 {"index":{"_id":5}}{"title":"test 5"}
 ```
 
+##### 至此，Elasticsearch ILM(生命周期管理)就介绍完成了，请开始你的表演吧！
+
+&nbsp;
+
+**有兴趣的小伙伴，可加联系方式：Telegram：@dean_code**  
