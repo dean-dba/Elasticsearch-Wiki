@@ -2,9 +2,11 @@
 
 #### ES 快照是ES内置的一种物理备份恢复的功能，快照采用数据段唯一存储和每个快照保留完整文件引用清单的方式，在存储和效率之间平衡，通过内置SLM(snapshot lifecycle management)快照生命周期管理对快照进行自动备份与快照保留周期管理
 
-#### ES 备份恢复方法：物理快照、reindex(同集群、跨集群)、elasticdump(同集群、跨集群)、Logstash
+#### ES 备份恢复方法：物理快照、reindex(同集群、跨集群)、elasticdump(同集群、跨集群)、Logstash、CCR(cross-cluster replication)跨集群复制
 
 #### ES 8.0默认情况下索引已存在时恢复会报错，受参数"action.destructive_requires_name": true影响
+
+#### ES 快照管理可以通过Kibana进行管理
 
 创建ES 快照步骤
 ```
@@ -72,3 +74,9 @@ PUT _slm/policy/daily_snapshot_policy
 
 查看SLM设置："GET _slm/policy/daily_snapshot_policy"
 ```
+
+##### 至此，Elasticsearch 快照就介绍完成了，请开始你的表演吧！
+
+&nbsp;
+
+**有兴趣的小伙伴，可加联系方式：Telegram：@dean_code**  
