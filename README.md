@@ -17,6 +17,7 @@ Elasticsearch是一款使用Java语言基于Apache Lucene开发的分布式全�
 - **<a href="https://github.com/dean-dba/Elasticsearch-Wiki/blob/main/Elasticsearch%20%E6%A3%80%E7%B4%A2.md" target="_blank">Elasticsearch 检索</a>**
 - **<a href="https://github.com/dean-dba/Elasticsearch-Wiki/blob/main/Elasticsearch%20%E8%81%9A%E5%90%88.md" target="_blank">Elasticsearch 聚合</a>**
 - **<a href="https://github.com/dean-dba/Elasticsearch-Wiki/blob/main/Elasticsearch%20ILM(%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%AE%A1%E7%90%86).md" target="_blank">Elasticsearch ILM(生命周期管理)</a>**
+- **<a href="https://github.com/dean-dba/Elasticsearch-Wiki/blob/main/Elasticsearch%20%E5%BF%AB%E7%85%A7.md" target="_blank">Elasticsearch 快照</a>**
   
 &nbsp;
 
