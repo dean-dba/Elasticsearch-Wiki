@@ -6,6 +6,10 @@
 
 #### ES 8.0默认情况下索引已存在时恢复会报错，受参数"action.destructive_requires_name": true影响
 
+#### ES 备份恢复默认速率默认无限制，但恢复受参数"indices.recovery.max_bytes_per_sec(默认：40mb)"控制
+
+#### ES 备份恢复速率参数："max_snapshot_bytes_per_sec"、"max_restore_bytes_per_sec"
+
 #### ES 快照管理可以通过Kibana进行管理
 
 创建ES 快照步骤
