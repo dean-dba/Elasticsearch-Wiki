@@ -39,5 +39,5 @@ esrally list races
 
 查看比赛间差异结果
 ```
-compare --baseline 0993c565-533c-455c-98f2-bbf9b4cab498 --contender bc501396-e11c-4036-9d37-25428b70ac82
+esrally compare --baseline 0993c565-533c-455c-98f2-bbf9b4cab498 --contender bc501396-e11c-4036-9d37-25428b70ac82
 ```
